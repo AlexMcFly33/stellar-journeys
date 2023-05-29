@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: "pages#home"
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  resources :spaceships do
+    resources :journeys, only: [:create]
+  end
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  namespace :admin do
+    resources :journeys, only: [:index]
+    resources :spaceships, only: [:index]
+  end
 end
