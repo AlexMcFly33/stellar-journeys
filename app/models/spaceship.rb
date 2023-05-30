@@ -2,7 +2,7 @@ class Spaceship < ApplicationRecord
   belongs_to :user
   has_many :journeys
   has_many :users
-  has_many_attached :photos
+  has_one_attached :photo
 
   validates :name, presence: true
   validates :superficy, presence: true

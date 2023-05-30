@@ -1,7 +1,7 @@
 <div class="navbar navbar-expand-sm navbar-lewagon fixed-top mb-3" data-controller="navbar" data-action="scroll@window->navbar#updateNavbar">
   <div class="container-fluid">
     <a class="navbar-brand" href="/spaceships">
-      <%= image_tag "Logo_blanc.png" %>
+      <%= image_tag "Logo_noir.png" %>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -11,9 +11,6 @@
           <li class="nav-item active">
             <a class="nav-link" href="/spaceships">Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="journeys_path">My Profile</a>
-          </li>
           <li class="nav-item dropdown">
             <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="<%=asset_path("avatar.jpg") %>" />
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
@@ -22,7 +19,6 @@
               <%= link_to "Create an offer", new_spaceship_path %>
               <p id="other_options"> --- Manage your account ---</p>
               <%= link_to "Your profile", admin_spaceships_path %>
-              <a class="dropdown-item" href="#">Another action?</a>
               <a class="dropdown-item" data-turbo-method="delete" href="#">Log out</a>
             </div>
           </li>
