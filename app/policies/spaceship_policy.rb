@@ -6,15 +6,11 @@ class SpaceshipPolicy < ApplicationPolicy
     end
   end
 
-  def create?
+  def new?
     true
   end
 
-  def update?
-    record.user == user
-  end
-
-  def destroy?
-    record.user == user
+  def show?
+    true
   end
 end
