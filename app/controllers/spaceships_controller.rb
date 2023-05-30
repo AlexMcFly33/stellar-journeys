@@ -50,7 +50,8 @@ class SpaceshipsController < ApplicationController
       :gravity,
       :localisation,
       :number_of_guest,
-      :price
+      :price,
+      :photo
     )
   end
 end
