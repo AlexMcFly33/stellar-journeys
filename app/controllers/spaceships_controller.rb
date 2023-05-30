@@ -3,7 +3,7 @@ class SpaceshipsController < ApplicationController
 
   def index
     @spaceships = Spaceship.all
-    # @spaceships = policy_scope(Spaceship)
+    @spaceships = policy_scope(Spaceship)
   end
 
   def show
