@@ -1,28 +1,59 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/spaceships">
-      <%= image_tag "Logo_blanc.png" %>
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="/spaceships">Home</a>
-          </li>
-          <li class="nav-item dropdown">
-            <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="<%=asset_path("avatar.jpg") %>" />
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <p id="other_options"> --- Your offers ---</p>
-              <%= link_to "Pending journeys", admin_journeys_path %>
-              <%= link_to "Create an offer", new_spaceship_path %>
-              <p id="other_options"> --- Manage your account ---</p>
-              <%= link_to "Your profile", admin_spaceships_path %>
-              <%= link_to "Log out", destroy_user_session_path %>
-            </div>
-          </li>
-      </ul>
+<% if user_signed_in? %>
+  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/spaceships">
+        <%= image_tag "Logo_blanc.png" %>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/spaceships">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="<%=asset_path("avatar.jpg") %>" />
+              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                <p id="other_options"> --- Your offers ---</p>
+                <div>
+                  <%= link_to "Pending journeys", admin_journeys_path %>
+                </div>
+                <div>
+                  <%= link_to "Create an offer", new_spaceship_path %>
+                </div>
+                  <p id="other_options"> --- Manage your account ---</p>
+                <div>
+                  <%= link_to "Your profile", admin_spaceships_path %>
+                </div>
+                <div>
+                  <%= link_to "Log out", destroy_user_session_path, data: { turbo_method: :delete } %>
+                </div>
+              </div>
+            </li>
+        </ul>
+      </div>
     </div>
   </div>
-</div>
+  <% else %>
+  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/spaceships">
+        <%= image_tag "Logo_blanc.png" %>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/spaceships">Home</a>
+            </li>
+            <div id="sign_in">
+              <%= link_to "Sign in", new_user_session_path %><br />
+            </div>
+        </ul>
+      </div>
+    </div>
+  </div>
+<% end %>
