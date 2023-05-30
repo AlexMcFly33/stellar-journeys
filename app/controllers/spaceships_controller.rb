@@ -2,7 +2,6 @@ class SpaceshipsController < ApplicationController
   before_action :set_spaceship, only: [:show, :edit, :update, :destroy]
 
   def index
-    @spaceships = Spaceship.all
     @spaceships = policy_scope(Spaceship)
   end
 
