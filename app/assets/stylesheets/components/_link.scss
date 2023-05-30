@@ -1,3 +1,14 @@
 .link {
   text-decoration: none;
 }
+
+.link-cards {
+  text-decoration: none;
+  color: black;
+  transition: 0.5s;
+  &:hover {
+    color: rgb(161, 160, 160);
+    transition: 0.5s;
+    opacity: 0.6;
+  }
+}
