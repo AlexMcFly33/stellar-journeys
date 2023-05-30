@@ -1,5 +1,5 @@
 class SpaceshipsController < ApplicationController
-  before_action :set_spaceship, only: [:show, :edit, :update, :destroy]
+  before_action :set_spaceship, only: [:show]
   skip_before_action :authenticate_user!, only: [:index, :show]
 
 
@@ -19,24 +19,12 @@ class SpaceshipsController < ApplicationController
   def create
     @spaceship = Spaceship.new(spaceship_params)
     @spaceship.user = current_user
+    authorize @spaceship
     if @spaceship.save
       redirect_to spaceships_path
     else
       render :new, status: :unprocessable_entity
     end
-  end
-
-  def edit
-  end
-
-  def update
-    @spaceship.update(spaceship_params)
-    redirect_to spaceship_path(@spaceship)
-  end
-
-  def destroy
-    @spaceship.destroy
-    redirect_to spaceships_path, status: :see_other
   end
 
   private
