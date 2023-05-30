@@ -1,5 +1,7 @@
 class SpaceshipsController < ApplicationController
   before_action :set_spaceship, only: [:show, :edit, :update, :destroy]
+  skip_before_action :authenticate_user!, only: [:index, :show]
+
 
   def index
     @spaceships = policy_scope(Spaceship)
@@ -11,6 +13,7 @@ class SpaceshipsController < ApplicationController
 
   def new
     @spaceship = Spaceship.new
+    authorize @spaceship
   end
 
   def create
@@ -50,7 +53,8 @@ class SpaceshipsController < ApplicationController
       :gravity,
       :localisation,
       :number_of_guest,
-      :price
+      :price,
+      :photo
     )
   end
 end
