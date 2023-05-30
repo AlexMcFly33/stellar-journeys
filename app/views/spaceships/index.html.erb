@@ -1,15 +1,17 @@
 <div class="container cards">
 <% @spaceships.each do |spaceship| %>
-  <div class="card-trip">
-    <img src="https://media.gqmagazine.fr/photos/5b991e0a5e8dfe0011248866/16:9/w_2560%2Cc_limit/combien_co__te_la_fabrication_d_un_faucon_millenium___2949.jpeg" />
-    <div class="card-trip-infos">
-      <div>
-        <h2><%= spaceship.name %></h2>
-        <p>Short description here!</p>
+  <%= link_to spaceship_path(spaceship), class: "link-cards" do%>
+    <div class="card-trip">
+      <img src="https://media.gqmagazine.fr/photos/5b991e0a5e8dfe0011248866/16:9/w_2560%2Cc_limit/combien_co__te_la_fabrication_d_un_faucon_millenium___2949.jpeg" />
+      <div class="card-trip-infos">
+        <div>
+          <h2><%= spaceship.name %></h2>
+          <p><%= spaceship.localisation %></p>
+        </div>
+        <h2 class="card-trip-pricing"><%= spaceship.price %>€</h2>
+        <img src="https://joueclub-joueclub-fr-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/2fc2d126386412b3d43cf6e3f29628ca8ab4b902_41063493.jpeg" class="card-trip-user avatar-bordered" />
       </div>
-      <h2 class="card-trip-pricing"><%= spaceship.price %></h2>
-      <img src="https://joueclub-joueclub-fr-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/2fc2d126386412b3d43cf6e3f29628ca8ab4b902_41063493.jpeg" class="card-trip-user avatar-bordered" />
     </div>
-  </div>
+    <% end %>
   <% end %>
 </div>
