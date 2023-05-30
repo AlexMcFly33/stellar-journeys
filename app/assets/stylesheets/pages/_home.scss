@@ -14,7 +14,12 @@
   text-decoration: none;
   margin: 0px;
   color:black;
-  font-weight: bold;;
+  font-weight: bold;
+}
+
+#Go a:hover {
+  color: darkblue;
+  transition: 0.3s;
 }
 
 .btn {
