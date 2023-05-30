@@ -1,0 +1,9 @@
+<h1>Welcome to your profile</h1>
+
+<h3>Find your spaceship :</h3>
+
+<ul>
+  <% @spaceships.each do |spaceship| %>
+    <li><<%= spaceship.name %>/li>
+  <% end %>
+</ul>
