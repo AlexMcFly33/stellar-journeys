@@ -6,7 +6,6 @@ class Spaceship < ApplicationRecord
 
   validates :name, presence: true
   validates :superficy, presence: true
-  validates :gravity, presence: true
   validates :localisation, presence: true
   validates :number_of_guest, presence: true
   validates :price, presence: true
