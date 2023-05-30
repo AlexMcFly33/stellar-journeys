@@ -11,6 +11,7 @@ class SpaceshipsController < ApplicationController
 
   def new
     @spaceship = Spaceship.new
+    authorize @spaceship
   end
 
   def create
