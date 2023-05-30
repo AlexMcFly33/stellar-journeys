@@ -281,11 +281,7 @@ DEPENDENCIES
   autoprefixer-rails
   bootsnap
   capybara
-<<<<<<< HEAD
-  compass
-=======
   cloudinary
->>>>>>> master
   debug
   devise
   dotenv-rails
