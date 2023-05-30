@@ -1,10 +1,13 @@
-<%= simple_form_for(@spaceship) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :superficy %>
-  <%= f.input :gravity %>
-  <%= f.input :localisation %>
-  <%= f.input :number_of_guest %>
-  <%= f.input :price %>
-  <%= f.input :photo, as: :file %>
-  <%= f.submit %>
-<% end %>
+
+<div class="form">
+  <%= simple_form_for(@spaceship) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :superficy %>
+    <%= f.input :gravity %>
+    <%= f.input :localisation %>
+    <%= f.input :number_of_guest %>
+    <%= f.input :price %>
+    <%= f.input :photo, as: :file %>
+    <%= f.submit 'Create a Spaceship 🚀', class: "btn btn-primary"%>
+  <% end %>
+</div>
