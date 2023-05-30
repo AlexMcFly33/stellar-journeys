@@ -1,15 +1,16 @@
-.navbar-lewagon {
-  background-color: transparent;
-  transition: 0.5s background-color ease;
-}
-
-.navbar-lewagon-white {
-  background-color: white;
-  box-shadow: 1px 1px 1px grey;
+.navbar {
+  background-image: url("https://cdn.theatlantic.com/thumbor/wxitU7HiKaRDjAYlYL-hdzViXAE=/0x141:2781x1705/976x549/media/img/mt/2015/10/Cygnus_v3_BandW/original.jpg");
+  position: fixed;
+  width: 100%;
+  position: relative;
 
   .nav-link {
-    color: black;
+    color:white;
   }
+}
+
+.nav-link {
+  color:white;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -30,13 +31,9 @@ li {
 #other_options {
   font-size: 10px;
   margin-top: 5px;
-  margin-bottom: 5px;
+  margin-bottom: 0px;
   text-align: center;
   color: rgb(171, 160, 160);
-}
-
-.nav-link {
-  color: white;
 }
 
 .dropdown-menu a {
