@@ -1,19 +1,23 @@
 .navbar {
-  background-image: url("https://cdn.theatlantic.com/thumbor/wxitU7HiKaRDjAYlYL-hdzViXAE=/0x141:2781x1705/976x549/media/img/mt/2015/10/Cygnus_v3_BandW/original.jpg");
+  background-image: url("https://lejournal.cnrs.fr/sites/default/files/styles/visuel_principal/public/assets/images/main_image_star-forming_region_carina_nircam_final-5mb_72dpi.jpg?itok=tGjbPUNa");
   background-size: cover;
+  background-position:bottom ;
   position: sticky;
   top: 0px;
   width: 100%;
   margin-bottom: 80px;
-  box-shadow: 1px 1px black;
+  box-shadow: 1px 1px 10px black;
+  z-index: 9999;
 
   .nav-link {
     color:white;
   }
 }
 
-.nav-link {
+.nav-link-home {
   color:white;
+  text-align: right;
+  text-decoration: none;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -27,8 +31,12 @@
 }
 
 li {
-  width: 150px;
+  width: 100px;
   text-align: center;
+}
+
+#avatar {
+  margin-right: 80px;
 }
 
 #other_options {
@@ -51,6 +59,7 @@ li {
   font-size: 20px;
   margin-right: 60px;
   text-align: center;
-  padding: 5px;
+  padding: 10px;
   background-color: white;
+  border-radius: 5px;
 }

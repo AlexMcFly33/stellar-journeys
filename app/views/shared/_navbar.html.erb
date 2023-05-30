@@ -12,7 +12,7 @@
             <li class="nav-item active">
               <a class="nav-link" href="/spaceships">Home</a>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown" id="avatar">
               <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="<%=asset_path("avatar.jpg") %>" />
               <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                 <p id="other_options"> --- Your offers ---</p>
@@ -20,7 +20,7 @@
                   <%= link_to "Pending journeys", admin_journeys_path %>
                 </div>
                 <div>
-                  <%= link_to "Create an offer", new_spaceship_path %>
+                  <%= link_to "Add a spaceship", new_spaceship_path %>
                 </div>
                   <p id="other_options"> --- Manage your account ---</p>
                 <div>
