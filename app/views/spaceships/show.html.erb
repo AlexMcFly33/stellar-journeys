@@ -1,19 +1,21 @@
 <%= render "shared/banner" %>
 
+<h1><%=@spaceship.name%></h1>
+
 <div class="container">
-  <div class="spaceship-infos">
-    <div class="infos">
+  <div class="row">
+    <div class="col-sm-4">
       <p>Superficy :<%= @spaceship.superficy %></p>
       <p>Gravity available :<%= @spaceship.gravity %></p>
       <p>Localisation :<%= @spaceship.localisation %></p>
       <p>Members capacity :<%= @spaceship.number_of_guest %></p>
       <p>Price :<%= @spaceship.price %> €</p>
     </div>
-    <div class="ship-img">
+    <div class="col-sm-4">
       <p> <img src="https://media.gqmagazine.fr/photos/5b991e0a5e8dfe0011248866/16:9/w_2560%2Cc_limit/combien_co__te_la_fabrication_d_un_faucon_millenium___2949.jpeg" alt="ship"> </p>
     </div>
-    <div class="booking">
-      <p>Booking</p>
+    <div class="col-sm-4" id="booking">
+      <p> <%= render "shared/booking" %></p>
     </div>
   </div>
 

@@ -4,6 +4,10 @@ class JourneysController < ApplicationController
     @journeys = Journey.all
   end
 
+  def new
+    @journey = Journey.new
+  end
+
   def show
     @journey = Journey.find(params[:id])
   end
