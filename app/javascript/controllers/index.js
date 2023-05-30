@@ -9,3 +9,6 @@ application.register("hello", HelloController)
 
 import HomeController from "./home_controller"
 application.register("home", HomeController)
+
+import NavbarController from "./navbar_controller.js"
+application.register("navbar", NavbarController)
