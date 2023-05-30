@@ -1,1 +1,136 @@
-// Specific CSS for your home-page
+.search-form-control {
+  position: relative;
+}
+
+.search-form-control .btn {
+  position: absolute;
+  top: 3px;
+  bottom: 8px;
+  right: 8px;
+}
+
+.search-form-control .form-control {
+  height: 2.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  border: 1px solid #E7E7E7;
+  border-radius: 10px;
+  opacity: 60%;
+    &:hover {
+      opacity: 80%;
+      border-color: #9ecaed;
+      box-shadow: 0 0 10px #9ecaed;
+    }
+}
+
+.search-form-control .form-control:focus {
+  border: 1px solid #1EDD88;
+  outline: none !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.box{
+  width: 100%;
+  text-align:center;
+  background-image: url("https://images4.alphacoders.com/102/1020733.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.simple_form {
+  padding-top: 15%;
+  padding-left: 30%;
+  padding-right: 30%;
+  height: 100vh;
+}
+
+// test
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box !important;
+}
+
+html, body {
+  height: 100%;
+}
+
+.box {
+  display: table;
+  width: 100%;
+  height: 100%;
+  background-color: #171717;
+  color: #000;
+  line-height: 1.6;
+  position: relative;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+.lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  margin: auto;
+  width: 90vw;
+}
+
+.line {
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+.line::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 15vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
+  -webkit-animation: drop 7s 0s infinite;
+          animation: drop 7s 0s infinite;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+          animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+.line:nth-child(1) {
+  margin-left: -25%;
+}
+.line:nth-child(1)::after {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+.line:nth-child(3) {
+  margin-left: 25%;
+}
+.line:nth-child(3)::after {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+@-webkit-keyframes drop {
+  0% {
+    top: -50%;
+  }
+  100% {
+    top: 110%;
+  }
+}
+
+@keyframes drop {
+  0% {
+    top: -50%;
+  }
+  100% {
+    top: 110%;
+  }
+}
