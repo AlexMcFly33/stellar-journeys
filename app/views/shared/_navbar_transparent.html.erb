@@ -1,5 +1,5 @@
 <% if user_signed_in? %>
-  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon <%= params[:action] == "home" ? "navbar-transparent" : "navbar-image" %>">
+  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
     <div class="container-fluid">
       <a class="navbar-brand" href="/spaceships">
         <%= image_tag "Logo_blanc.png" %>
@@ -13,7 +13,7 @@
               <a class="nav-link" href="/spaceships">Home</a>
             </li>
             <li class="nav-item dropdown" id="avatar">
-              <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="<%=asset_path("dark vador.png") %>" />
+              <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="<%=asset_path("avatar.jpg") %>" />
               <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                 <p id="other_options"> --- Your offers ---</p>
                 <div>
