@@ -3,7 +3,7 @@ class Admin::SpaceshipsController < ApplicationController
   skip_before_action :authenticate_user!
 
   def index
-    @spaceships = policy_scope(Spaceship)
+    @spaceships = policy_scope([:admin, Spaceship])
   end
 
   def edit; end
@@ -22,7 +22,7 @@ class Admin::SpaceshipsController < ApplicationController
 
   def set_spaceship
     @spaceship = Spaceship.find(params[:id])
-    authorize @spaceship
+    authorize [:admin, @spaceship]
   end
 
   def spaceship_params

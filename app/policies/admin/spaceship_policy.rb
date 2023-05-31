@@ -2,7 +2,7 @@ class Admin::SpaceshipPolicy < ApplicationPolicy
   class Scope < Scope
     # NOTE: Be explicit about which records you allow access to!
     def resolve
-      scope.where(user: user)
+      scope.where(user: @user)
     end
   end
 
@@ -11,10 +11,10 @@ class Admin::SpaceshipPolicy < ApplicationPolicy
   end
 
   def update?
-    record.user == user
+    @record.user == @user
   end
 
   def destroy?
-    record.user == user
+    @record.user == @user
   end
 end
