@@ -6,12 +6,11 @@ class Admin::SpaceshipsController < ApplicationController
     @spaceships = policy_scope(Spaceship)
   end
 
-  def edit
-  end
+  def edit; end
 
   def update
     @spaceship.update(spaceship_params)
-    redirect_to admin_spaceship_path(@spaceship)
+    redirect_to admin_spaceships_path(@spaceship)
   end
 
   def destroy

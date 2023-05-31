@@ -1,5 +1,5 @@
 <div class="form">
-  <%= simple_form_for(@spaceship) do |f| %>
+  <%= simple_form_for(@spaceship, url: admin_spaceship_path, method: :patch) do |f| %>
     <%= f.input :name %>
     <%= f.input :superficy %>
     <%= f.input :gravity %>
