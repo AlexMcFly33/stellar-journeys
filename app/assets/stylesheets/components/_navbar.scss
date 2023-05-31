@@ -1,8 +1,11 @@
 .navbar {
   background-image: url("https://cdn.theatlantic.com/thumbor/wxitU7HiKaRDjAYlYL-hdzViXAE=/0x141:2781x1705/976x549/media/img/mt/2015/10/Cygnus_v3_BandW/original.jpg");
-  position: fixed;
+  background-size: cover;
+  position: sticky;
+  top: 0px;
   width: 100%;
-  position: relative;
+  margin-bottom: 80px;
+  box-shadow: 1px 1px black;
 
   .nav-link {
     color:white;
@@ -40,4 +43,14 @@ li {
   text-decoration: none;
   color: black;
   padding-left: 5px;
+}
+
+#sign_in a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  margin-right: 60px;
+  text-align: center;
+  padding: 5px;
+  background-color: white;
 }
