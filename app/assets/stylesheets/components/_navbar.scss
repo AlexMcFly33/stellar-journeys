@@ -2,7 +2,7 @@
   position: sticky;
   top: 0px;
   width: 100%;
-  margin-bottom: 80px;
+  margin-bottom: 10px;
   z-index: 9999;
 
   .nav-link {
@@ -64,10 +64,16 @@ li {
 #sign_in a {
   text-decoration: none;
   color: black;
-  font-size: 20px;
+  font-size: 16px;
   margin-right: 60px;
-  text-align: center;
-  padding: 10px;
+  padding: 5px;
   background-color: white;
   border-radius: 5px;
+}
+
+#sign_in {
+  display: block;
+  padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+  font-size: var(--bs-nav-link-font-size);
+  font-weight: var(--bs-nav-link-font-weight);
 }

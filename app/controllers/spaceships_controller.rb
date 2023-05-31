@@ -21,7 +21,7 @@ class SpaceshipsController < ApplicationController
     @spaceship.user = current_user
     authorize @spaceship
     if @spaceship.save
-      redirect_to spaceships_path
+      redirect_to admin_spaceships_path
     else
       render :new, status: :unprocessable_entity
     end

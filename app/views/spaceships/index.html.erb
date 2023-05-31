@@ -1,13 +1,25 @@
-
-<div class="container cards mt-5">
+<div class="container mt-5">
+<% if Spaceship.count == 1%>
+  <p id = "ptitle"><i><%= Spaceship.count %> spaceship is available :</i></p>
+<% elsif Spaceship.count > 1%>
+  <p id = "ptitle"><i><%= Spaceship.count %> spaceships are available :</i></p>
+<% elsif %>
+  <p id = "ptitle"><i>Sorry, no result match with your research</i></p>
+  <% end %>
+</div>
+<div class="container cards">
 <% @spaceships.each do |spaceship| %>
   <%= link_to spaceship_path(spaceship), class: "link-cards" do%>
     <div class="card-trip">
-      <img src="<%= cl_image_path spaceship.photo.key %>" />
+      <% if spaceship.photo.attached? %>
+        <%= cl_image_tag spaceship.photo.key %>
+      <% else %>
+        <%= image_tag("/home/klafonta/code/Klafonta/AlexMcFly33/stellar-journeys/app/assets/images/no_spaceship.jpg") %>
+      <% end %>
       <div class="card-trip-infos">
         <div>
           <h2><%= spaceship.name %></h2>
-          <p><%= spaceship.localisation %></p>
+          <p>📍<%= spaceship.localisation %></p>
         </div>
         <h2 class="card-trip-pricing"><%= spaceship.price %>€</h2>
         <img src="https://joueclub-joueclub-fr-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/2fc2d126386412b3d43cf6e3f29628ca8ab4b902_41063493.jpeg" class="card-trip-user avatar-bordered" />
