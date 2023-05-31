@@ -1,22 +1,44 @@
 <%= render "shared/banner" %>
 
-<h1><%=@spaceship.name%></h1>
-
 <div class="container">
   <div class="row">
-    <div class="col-sm-4">
-      <p>Superficy :<%= @spaceship.superficy %></p>
-      <p>Gravity available :<%= @spaceship.gravity %></p>
-      <p>Localisation :<%= @spaceship.localisation %></p>
-      <p>Members capacity :<%= @spaceship.number_of_guest %></p>
-      <p>Price :<%= @spaceship.price %> €</p>
+    <div id="box" class="row col-sm-8">
+      <div class="col-sm-4">
+        <p>Superficy :<%= @spaceship.superficy %></p>
+        <p>Gravity available :<%= @spaceship.gravity %></p>
+        <p>Localisation :<%= @spaceship.localisation %></p>
+        <p>Members capacity :<%= @spaceship.number_of_guest %></p>
+        <p>Price :<%= @spaceship.price %> €</p>
+      </div>
+      <div class="col-sm-4" id="spaceship-img">
+        <p> <img src="https://media.gqmagazine.fr/photos/5b991e0a5e8dfe0011248866/16:9/w_2560%2Cc_limit/combien_co__te_la_fabrication_d_un_faucon_millenium___2949.jpeg" alt="ship"> </p>
+        <div class="rating">
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star"></span>
+          <span class="fa fa-star"></span>
+        </div>
+      </div>
     </div>
-    <div class="col-sm-4">
-      <p> <img src="https://media.gqmagazine.fr/photos/5b991e0a5e8dfe0011248866/16:9/w_2560%2Cc_limit/combien_co__te_la_fabrication_d_un_faucon_millenium___2949.jpeg" alt="ship"> </p>
-    </div>
-    <div class="col-sm-4" id="booking">
+    <div class="col-sm-4" id="box-booking">
       <p> <%= render "shared/booking" %></p>
     </div>
   </div>
 
 </div>
+
+        <%# <p>The Millennium Falcon is a fictional starship in
+        the Star Wars franchise. Designed by Joe Johnston for the
+        movie Star Wars (1977),[a] it has subsequently appeared in
+        The Star Wars Holiday Special (1978), The Empire Strikes Back
+        (1980), Return of the Jedi (1983), The Force Awakens (2015),
+        The Last Jedi (2017), Solo: A Star Wars Story (2018), and The
+        Rise of Skywalker (2019). Additionally, the Falcon appears in
+        a variety of Star Wars spin-off works, including books,
+        comics, and games; James Luceno's novel Millennium Falcon
+        focuses on the titular ship.[1] It also appears in the 2014
+        animated film The Lego Movie in Lego form. The ship, a
+        YT-1300 Corellian light freighter, is primarily commanded by
+        smuggler Han Solo (Harrison Ford and Alden Ehrenreich) and his
+        Wookiee first mate, Chewbacca (Peter Mayhew and Joonas Suotamo), and was previously owned by gambler/con-artist Lando Calrissian (Billy Dee Williams and Donald Glover). Solo: A Star Wars Story depicts the ship as being co-piloted by, and later integrated with, Calrissian's droid L3-37 (Phoebe Waller-Bridge). Described as being one of the fastest vessels in the Star Wars canon, the Falcon looks worn-out but despite its humble origins and shabby exterior, the Millennium Falcon has played a critical role in some of the greatest victories of the Rebel Alliance and the New Republic.</p> %>
