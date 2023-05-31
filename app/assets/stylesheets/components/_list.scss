@@ -12,11 +12,36 @@
   border-radius: 6px;
   padding: 8px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
 
+
+
+.box-booking {
+  border-radius: 6px;
+  padding: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  background-color: transparent;
+  justify-content: flex-end;
+  border-right: 15px;
+  position: fixed;
+}
+
+#box-description {
+  border-radius: 6px;
+  padding: 8px;
+  margin-top: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+}
+
+#row-description {
+  display: flex;
+  justify-content: flex-start;
 }
 
 .row {
-    justify-content: space-evenly;
+    justify-content: flex-start;
     padding: 0px;
     margin-right: 5px;
     align-content: center;
@@ -36,11 +61,4 @@
 
 .rating {
   margin: 10px;
-}
-
-#box-booking {
-  border-radius: 6px;
-  padding: 8px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-
 }
