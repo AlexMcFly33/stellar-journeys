@@ -6,17 +6,16 @@ class Admin::SpaceshipsController < ApplicationController
     @spaceships = policy_scope(Spaceship)
   end
 
-  def edit
-  end
+  def edit; end
 
   def update
     @spaceship.update(spaceship_params)
-    redirect_to spaceship_path(@spaceship)
+    redirect_to admin_spaceships_path(@spaceship)
   end
 
   def destroy
     @spaceship.destroy
-    redirect_to spaceships_path, status: :see_other
+    redirect_to admin_spaceships_path, status: :see_other
   end
 
   private

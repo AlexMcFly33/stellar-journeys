@@ -1,0 +1,56 @@
+.navbar {
+  background-image: url("https://cdn.theatlantic.com/thumbor/wxitU7HiKaRDjAYlYL-hdzViXAE=/0x141:2781x1705/976x549/media/img/mt/2015/10/Cygnus_v3_BandW/original.jpg");
+  background-size: cover;
+  position: sticky;
+  top: 0px;
+  width: 100%;
+  margin-bottom: 80px;
+  box-shadow: 1px 1px black;
+
+  .nav-link {
+    color:white;
+  }
+}
+
+.nav-link {
+  color:white;
+}
+
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-lewagon .navbar-brand img {
+  width:fit-content;
+  height: 70px;
+  margin-left: 20px;
+}
+
+li {
+  width: 150px;
+  text-align: center;
+}
+
+#other_options {
+  font-size: 10px;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  text-align: center;
+  color: rgb(171, 160, 160);
+}
+
+.dropdown-menu a {
+  text-decoration: none;
+  color: black;
+  padding-left: 5px;
+}
+
+#sign_in a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  margin-right: 60px;
+  text-align: center;
+  padding: 5px;
+  background-color: white;
+}
