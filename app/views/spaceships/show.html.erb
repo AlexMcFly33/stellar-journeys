@@ -11,7 +11,7 @@
         <p>Price :<%= @spaceship.price %> €</p>
       </div>
       <div class="col-sm-4" id="spaceship-img">
-        <p> <img src="https://media.gqmagazine.fr/photos/5b991e0a5e8dfe0011248866/16:9/w_2560%2Cc_limit/combien_co__te_la_fabrication_d_un_faucon_millenium___2949.jpeg" alt="ship"> </p>
+        <p> <img src="<%=cl_image_path @spaceship.photo.key%>"> </p>
         <div class="rating">
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>
@@ -21,14 +21,19 @@
         </div>
       </div>
     </div>
-    <div class="col-sm-4" id="box-booking">
-      <p> <%= render "shared/booking" %></p>
-    </div>
   </div>
-
 </div>
 
-        <%# <p>The Millennium Falcon is a fictional starship in
+<div id="sticky">
+  <div class="col-sm-4" id="box-booking">
+    <p> <%= render "shared/booking" %></p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row" id="row-description">
+    <div id="box-description" class="row col-sm-8">
+      <p>The Millennium Falcon is a fictional starship in
         the Star Wars franchise. Designed by Joe Johnston for the
         movie Star Wars (1977),[a] it has subsequently appeared in
         The Star Wars Holiday Special (1978), The Empire Strikes Back
@@ -42,3 +47,7 @@
         YT-1300 Corellian light freighter, is primarily commanded by
         smuggler Han Solo (Harrison Ford and Alden Ehrenreich) and his
         Wookiee first mate, Chewbacca (Peter Mayhew and Joonas Suotamo), and was previously owned by gambler/con-artist Lando Calrissian (Billy Dee Williams and Donald Glover). Solo: A Star Wars Story depicts the ship as being co-piloted by, and later integrated with, Calrissian's droid L3-37 (Phoebe Waller-Bridge). Described as being one of the fastest vessels in the Star Wars canon, the Falcon looks worn-out but despite its humble origins and shabby exterior, the Millennium Falcon has played a critical role in some of the greatest victories of the Rebel Alliance and the New Republic.</p> %>
+
+    </div>
+  </div>
+</div>
