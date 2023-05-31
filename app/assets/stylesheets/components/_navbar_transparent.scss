@@ -1,25 +1,10 @@
 .navbar {
-  position: sticky;
-  top: 0px;
+  background-color: transparent;
   width: 100%;
-  margin-bottom: 80px;
-  z-index: 9999;
 
   .nav-link {
     color:white;
   }
-}
-
-.navbar-transparent {
-  background-color: transparent;
-  position: fixed;
-}
-
-.navbar-image {
-  background-image: url("https://lejournal.cnrs.fr/sites/default/files/styles/visuel_principal/public/assets/images/main_image_star-forming_region_carina_nircam_final-5mb_72dpi.jpg?itok=tGjbPUNa");
-  background-size: cover;
-  background-position:bottom ;
-  box-shadow: 1px 1px 10px black;
 }
 
 .nav-link-home {
