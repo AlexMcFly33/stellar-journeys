@@ -14,18 +14,17 @@
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
-#sticky {
-  position: -webkit-sticky; /* for browser compatibility */
-  position: sticky;
-  top: 80px;
-  background-color: white;
-}
 
-#box-booking {
+
+.box-booking {
   border-radius: 6px;
   padding: 8px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   display: flex;
+  background-color: transparent;
+  justify-content: flex-end;
+  border-right: 15px;
+  position: fixed;
 }
 
 #box-description {

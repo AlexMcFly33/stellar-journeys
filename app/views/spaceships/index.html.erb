@@ -3,7 +3,11 @@
 <% @spaceships.each do |spaceship| %>
   <%= link_to spaceship_path(spaceship), class: "link-cards" do%>
     <div class="card-trip">
-      <img src="<%= cl_image_path spaceship.photo.key %>" />
+      <% if spaceship.photo.attached? %>
+        <%= cl_image_tag spaceship.photo.key %>
+      <% else %>
+        <%= image_tag("/home/klafonta/code/Klafonta/AlexMcFly33/stellar-journeys/app/assets/images/no_spaceship.jpg") %>
+      <% end %>
       <div class="card-trip-infos">
         <div>
           <h2><%= spaceship.name %></h2>
