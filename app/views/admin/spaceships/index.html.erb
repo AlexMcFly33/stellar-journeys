@@ -1,9 +1,14 @@
 <h1>Welcome to your profile</h1>
 
-<h3>Find your spaceship :</h3>
 
-<ul>
-  <% @spaceships.each do |spaceship| %>
-    <li><%= spaceship.name %></li>
+<div class="container-spaceship">
+  <h3 class="mt-4">Your Spaceship :</h3>
+    <% @spaceships.each do |spaceship| %>
+    <div class="card-product mt-3">
+    <img src="https://media.gqmagazine.fr/photos/5b991e0a5e8dfe0011248866/16:9/w_2560%2Cc_limit/combien_co__te_la_fabrication_d_un_faucon_millenium___2949.jpeg" />
+    <div class="card-product-infos">
+      <h2><%= spaceship.name %></h2>
+      <p><%= link_to '🗑️', admin_spaceships_path(spaceship), data: { turbo_method: :delete }, class: "link" %> - <%= link_to '📝', edit_admin_spaceship_path(spaceship), class: "link" %></p>
+    </div>
+  </div>
   <% end %>
-</ul>

@@ -1,4 +1,3 @@
-
 <div class="form">
   <%= simple_form_for(@spaceship) do |f| %>
     <%= f.input :name %>
@@ -8,7 +7,8 @@
     <%= f.input :number_of_guest %>
     <%= f.input :price %>
     <%= f.input :photo, as: :file %>
-    <%= f.submit 'Create a Spaceship 🚀', class: "btn btn-primary"%>
+    <%= f.submit 'Update your Spaceship 🚀', class: "btn btn-primary"%>
   <% end %>
-  <%= link_to "Back", spaceships_path, class: "link" %>
+    <%= link_to "Back", admin_spaceships_path, class: "link" %>
+
 </div>
