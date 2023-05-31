@@ -1,7 +1,4 @@
 
-<div>
-  <%= render "shared/navbar" %>
-</div>
 <div class="container cards mt-5">
 <% @spaceships.each do |spaceship| %>
   <%= link_to spaceship_path(spaceship), class: "link-cards" do%>
