@@ -1,8 +1,8 @@
-<h1>Welcome to your profile</h1>
 
-
-<div class="container-spaceship">
-  <h3 class="mt-4">Your Spaceship :</h3>
+<div class="container-spaceship mt-3">
+<h3>Dashboard 🚀</h3>
+<br>
+  <p id = "ptitle">Your spaceship :</p>
     <% @spaceships.each do |spaceship| %>
     <div class="card-product mt-3">
     <img src="<%= cl_image_path spaceship.photo.key %>" />
