@@ -70,10 +70,15 @@ li {
   border-radius: 5px;
   transition: 0.5s;
   background-color: #930940;
-  box-shadow: 1px 1px 0px white;
+  box-shadow: 1px 1px 10px white;
 }
 
 #sign_in a:hover {
   background-color: #F24453;
   transition: 0.5s;
+}
+
+#navbarDropdown {
+  border: 1px solid white;
+  box-shadow: 1px 1px 10px white;
 }
