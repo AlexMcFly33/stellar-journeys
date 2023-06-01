@@ -42,7 +42,8 @@ class SpaceshipsController < ApplicationController
       :localisation,
       :number_of_guest,
       :price,
-      :photo
+      :photo,
+      :description
     )
   end
 end
