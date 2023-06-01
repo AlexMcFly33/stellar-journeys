@@ -5,6 +5,7 @@
   margin-bottom: 10px;
   z-index: 9999;
 
+
   .nav-link {
     color:white;
   }
@@ -20,6 +21,10 @@
   background-size: cover;
   background-position: top;
   box-shadow: 1px 1px 10px black;
+}
+
+.navbar-nav {
+  align-items: center;
 }
 
 .nav-link-home {
