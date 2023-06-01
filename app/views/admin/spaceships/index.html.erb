@@ -1,20 +1,19 @@
+
 <div>
   <div class="container-spaceship">
-    <h3>Dashboard 🚀</h3>
-    <br>
-    <p id = "ptitle">Your spaceship :</p>
-    <% @spaceships.each do |spaceship| %>
-      <div class="card-product mt-3">
-        <% if spaceship.photo.attached? %>
-          <%= cl_image_tag spaceship.photo.key %>
-        <% else %>
-          <%= image_tag("/home/klafonta/code/Klafonta/AlexMcFly33/stellar-journeys/app/assets/images/no_spaceship.jpg") %>
-        <% end %>
-        <div class="card-product-infos">
-          <h2><%= spaceship.name %></h2>
-          <p><%= link_to '🗑️', admin_spaceship_path(spaceship), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "link" %> - <%= link_to '📝', edit_admin_spaceship_path(spaceship), class: "link" %></p>
-        </div>
+    <p id = "ptitle"><i>Your spaceship :</i></p>
+      <% @spaceships.each do |spaceship| %>
+        <div class="card-product mt-3">
+            <% if spaceship.photo.attached? %>
+                <%= cl_image_tag spaceship.photo.key %>
+              <% else %>
+                <%= image_tag("/home/klafonta/code/Klafonta/AlexMcFly33/stellar-journeys/app/assets/images/no_spaceship.jpg") %>
+            <% end %>
+      <div class="card-product-infos">
+        <h2><%= spaceship.name %></h2>
+        <%= link_to "<i class='fa-solid fa-trash-can'></i>".html_safe, admin_spaceship_path(spaceship), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "link" %> - <%= link_to "<i class='fa-solid fa-pen-to-square'></i>".html_safe, edit_admin_spaceship_path(spaceship), class: "link" %>
       </div>
+    </div>
     <% end %>
   </div>
 </div>

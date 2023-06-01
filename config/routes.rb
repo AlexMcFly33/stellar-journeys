@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   end
 
   namespace :admin do
-    resources :journeys, only: [:index]
+    resources :journeys, only: [:index, :destroy]
     resources :spaceships, only: [:index, :edit, :update, :destroy]
   end
 end
