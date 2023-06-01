@@ -1,11 +1,20 @@
-.col-sm-4 {
-    img {
-      width: 100%;
-      height: 100%;
-      border-radius: 6px;
-      padding: 8px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    }
+
+#head-bar {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.user-pic {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    height: 100%;
+    box-shadow: 0 0 15px rgba(1, 1, 1, 0.7);
+    border-radius: 50%;
+  }
 }
 
 .container {
@@ -18,6 +27,17 @@
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: space-around;
+  margin-bottom: 15px;
+  align-items: center;
+
+}
+
+.box-description {
+  border-radius: 6px;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-around;
   margin-bottom: 10px;
   align-items: center;
     p {
@@ -26,11 +46,9 @@
 }
 
 .box-booking:hover {
-  background-image: url("https://images4.alphacoders.com/102/1020733.jpg");
-  transform: scale(1.2);
-    label {
-      color: white;
-    }
+  // background-image: url("https://images4.alphacoders.com/102/1020733.jpg");
+  border-color: #1F4556;
+  box-shadow: 0 0 10px #1F4556;
 }
 
 .box-booking {
@@ -57,6 +75,13 @@
   padding: 0px;
   flex-wrap: wrap;
   flex-direction: column;
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    padding: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  }
 }
 
 .checked {
