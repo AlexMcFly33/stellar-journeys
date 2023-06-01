@@ -1,1 +1,19 @@
-<h1>hello</h1>
+<div class="container-spaceship mt-3">
+<h3>Journeys</h3>
+<br>
+  <p id = "ptitle">Your next journey :</p>
+    <% @journeys.each do |journey| %>
+      <div class="card-product mt-3">
+          <% if journey.spaceship.photo.attached? %>
+              <%= cl_image_tag journey.spaceship.photo.key %>
+            <% else %>
+              <%= image_tag("/home/klafonta/code/Klafonta/AlexMcFly33/stellar-journeys/app/assets/images/no_spaceship.jpg") %>
+          <% end %>
+    <div class="card-product-infos">
+      <h2><%= journey.spaceship.name %></h2>
+        <%= journey.start_date %>
+        <%= journey.end_date %>
+    </div>
+  </div>
+  <% end %>
+</div>
