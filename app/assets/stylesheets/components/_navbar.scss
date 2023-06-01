@@ -16,9 +16,9 @@
 }
 
 .navbar-image {
-  background-image: url("https://lejournal.cnrs.fr/sites/default/files/styles/visuel_principal/public/assets/images/main_image_star-forming_region_carina_nircam_final-5mb_72dpi.jpg?itok=tGjbPUNa");
+  background-image: url("https://images4.alphacoders.com/102/1020733.jpg");
   background-size: cover;
-  background-position:bottom ;
+  background-position: top;
   box-shadow: 1px 1px 10px black;
 }
 
@@ -63,17 +63,17 @@ li {
 
 #sign_in a {
   text-decoration: none;
-  color: black;
+  color: white;
   font-size: 16px;
   margin-right: 60px;
-  padding: 5px;
-  background-color: white;
+  padding: 10px;
   border-radius: 5px;
+  transition: 0.5s;
+  background-color: #930940;
+  box-shadow: 1px 1px 0px white;
 }
 
-#sign_in {
-  display: block;
-  padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
-  font-size: var(--bs-nav-link-font-size);
-  font-weight: var(--bs-nav-link-font-weight);
+#sign_in a:hover {
+  background-color: #F24453;
+  transition: 0.5s;
 }

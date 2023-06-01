@@ -53,6 +53,14 @@ li {
   margin-right: 60px;
   text-align: center;
   padding: 10px;
-  background-color: white;
+  background-color: #1f4556;
   border-radius: 5px;
+  transition: 0.5s;
+  background-color: #930940;
+  box-shadow: 1px 1px 30px white;
+}
+
+#sign_in a:hover {
+  background-color: #F24453;
+  transition: 0.5s;
 }
