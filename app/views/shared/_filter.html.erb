@@ -1,0 +1,33 @@
+<div class="row justify-content-center">
+  <div class="col-sm-3 my-3">
+    <%= form_with url: spaceships_path, method: :get, class: "d-flex" do %>
+      <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Spaceship name"
+        %>
+    <% end %>
+  </div>
+
+  <div class="col-sm-3 my-3">
+    <%= form_with url: spaceships_path, method: :get, class: "d-flex" do %>
+      <%= text_field_tag :superficy,
+            params[:superficy],
+            class: "form-control",
+            placeholder: "Superficy"
+        %>
+    <% end %>
+  </div>
+
+ <div class="col-sm-3 my-3">
+    <%= form_with url: spaceships_path, method: :get, class: "d-flex" do %>
+      <%= text_field_tag :localisation,
+            params[:localisation],
+            class: "form-control",
+            placeholder: "Localisation"
+        %>
+    <% end %>
+  </div>
+
+
+</div>

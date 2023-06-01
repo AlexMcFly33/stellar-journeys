@@ -5,6 +5,17 @@ class SpaceshipsController < ApplicationController
 
   def index
     @spaceships = policy_scope(Spaceship)
+    if params[:query].present?
+      @spaceships = @spaceships.where("name ILIKE ?", "%#{params[:query]}%")
+    end
+
+    if params[:superficy].present?
+      @spaceships = @spaceships.where(superficy: params[:superficy])
+    end
+
+    if params[:localisation].present?
+      @spaceships = @spaceships.where(localisation: params[:localisation])
+    end
   end
 
   def show
