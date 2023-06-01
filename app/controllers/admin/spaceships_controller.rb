@@ -28,6 +28,7 @@ class Admin::SpaceshipsController < ApplicationController
   def spaceship_params
     params.require(:spaceship).permit(
       :name,
+      :description,
       :superficy,
       :gravity,
       :localisation,

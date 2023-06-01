@@ -1,6 +1,7 @@
 <div class="form">
   <%= simple_form_for(@spaceship, url: admin_spaceship_path, method: :patch) do |f| %>
     <%= f.input :name %>
+    <%= f.input :description %>
     <%= f.input :superficy %>
     <%= f.input :gravity %>
     <%= f.input :localisation %>
