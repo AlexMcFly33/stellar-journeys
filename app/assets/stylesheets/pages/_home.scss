@@ -1,3 +1,37 @@
+.home {
+  position: relative;
+}
+
+.text-homepage {
+  position: absolute;
+  bottom: -628px;
+  left: 64px;
+  color: white;
+  text-align: left;
+
+  h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    margin: 1px;
+  }
+
+  a {
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    border: white solid;
+    border-radius: 20px;
+    padding: 5px 30px;
+    font-size: 20px;
+    transition: 0.5s;
+    margin-top: 9px;
+    display: inline-block;
+
+    &:hover {
+      background-color: #F24453;
+    }
+  }
+}
+
 .search-form-control {
   position: relative;
 }
