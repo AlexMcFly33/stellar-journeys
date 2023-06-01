@@ -12,9 +12,13 @@
 
   <body>
     <%= render 'shared/navbar' %>
-      <%= yield %>
       <% if params[:action] != "home" %>
-        <%= render 'shared/footer' %>
+        <div class="main-wrapper">
+          <%= yield %>
+        </div>
+        <%= render "shared/footer" %>
+      <% else %>
+        <%= yield %>
       <% end %>
   </body>
 </html>

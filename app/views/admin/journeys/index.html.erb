@@ -1,0 +1,17 @@
+<div class="container-spaceship mt-4">
+  <p id = "ptitle"><i>Waiting for confirmation from the owner :</i></p>
+    <% @journeys.each do |journey| %>
+      <div class="card-product mt-3">
+          <% if journey.spaceship.photo.attached? %>
+            <%= cl_image_tag journey.spaceship.photo.key %>
+          <% else %>
+            <%= image_tag("/home/klafonta/code/Klafonta/AlexMcFly33/stellar-journeys/app/assets/images/no_spaceship.jpg") %>
+          <% end %>
+    <div class="card-product-infos">
+      <h2><%= journey.spaceship.name %> <%= link_to "<i class='fa-solid fa-trash-can'></i>".html_safe, admin_journey_path(journey), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "link" %></h2>
+        <p>Du <%= journey.start_date.day%>-<%= journey.start_date.month %>-<%= journey.start_date.year %>  au <%= journey.end_date.day%>-<%= journey.end_date.month %>-<%= journey.end_date.year %>
+
+    </div>
+  </div>
+  <% end %>
+</div>
