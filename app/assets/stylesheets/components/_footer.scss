@@ -1,15 +1,17 @@
+
 .footer {
   background-image: url("https://images4.alphacoders.com/102/1020733.jpg");
   background-position: bottom;
   background-size: cover;
+  margin-top: 80px;
+  color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 100px;
+  height: 60px;
   padding: 0px 50px;
-  margin-top: 80px;
-  color: white;
 }
+
 .footer-links {
   display: flex;
   align-items: center;
