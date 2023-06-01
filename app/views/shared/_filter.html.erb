@@ -4,30 +4,16 @@
       <%= text_field_tag :query,
             params[:query],
             class: "form-control",
-            placeholder: "Spaceship name"
+            placeholder: "Find your Spaceship"
         %>
     <% end %>
   </div>
 
-  <div class="col-sm-3 my-3">
+
+<div class="col-sm-1 my-3">
     <%= form_with url: spaceships_path, method: :get, class: "d-flex" do %>
-      <%= text_field_tag :superficy,
-            params[:superficy],
-            class: "form-control",
-            placeholder: "Superficy"
-        %>
+      <%= select_tag :gravity, options_for_select([['Gravity', nil], ['With', true], ['Without', false]]), class: "form-filter" %>
+      <%= submit_tag "Gravity", class: "form-filter" %>
     <% end %>
   </div>
-
- <div class="col-sm-3 my-3">
-    <%= form_with url: spaceships_path, method: :get, class: "d-flex" do %>
-      <%= text_field_tag :localisation,
-            params[:localisation],
-            class: "form-control",
-            placeholder: "Localisation"
-        %>
-    <% end %>
-  </div>
-
-
 </div>
