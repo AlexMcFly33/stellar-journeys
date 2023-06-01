@@ -20,9 +20,11 @@
     font-family: 'Times New Roman', Times, serif;
     border: white solid;
     border-radius: 20px;
-    padding: 11px 30px;
+    padding: 5px 30px;
     font-size: 20px;
     transition: 0.5s;
+    margin-top: 9px;
+    display: inline-block;
 
     &:hover {
       background-color: #F24453;
