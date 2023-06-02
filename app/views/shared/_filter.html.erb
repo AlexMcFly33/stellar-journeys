@@ -10,10 +10,11 @@
   </div>
 
 
-<div class="col-sm-1 my-3">
+<div class="col-sm-2 my-3 d-flex justify-content">
     <%= form_with url: spaceships_path, method: :get, class: "d-flex" do %>
-      <%= select_tag :gravity, options_for_select([['Gravity', nil], ['With', true], ['Without', false]]), class: "form-filter" %>
-      <%= submit_tag "Gravity", class: "form-filter" %>
+      <%= select_tag :gravity, options_for_select([['Gravity ?'], ['All', nil], ['With', true], ['Without', false]]), class: "form-control",
+        onchange: "this.form.submit();"
+      %>
     <% end %>
   </div>
 </div>

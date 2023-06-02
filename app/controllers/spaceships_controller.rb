@@ -15,6 +15,9 @@ class SpaceshipsController < ApplicationController
       end
     end
     if params[:gravity].present?
+      if params[:gravity] == nil
+        spaceships_path
+      end
       @spaceships = @spaceships.where(gravity: params[:gravity])
     end
   end
