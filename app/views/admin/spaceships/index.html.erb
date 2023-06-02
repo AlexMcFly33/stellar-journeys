@@ -2,6 +2,7 @@
 <div>
   <div class="container-spaceship">
     <p id = "ptitle"><i>Your spaceship :</i></p>
+    <% new_spaceship = @spaceships.sample(3) %>
       <% @spaceships.each do |spaceship| %>
         <%= link_to spaceship_path(spaceship), class: "link-cards" do%>
           <div class="card-product mt-3">

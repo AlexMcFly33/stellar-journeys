@@ -17,25 +17,30 @@
       <p>Enjoy your trip and have fun.</p>
     </div>
   </div>
+  <div style="text-align: center">
+    <h3 class="quote mt-5">"I rent so much beautifull spaceship, thank you Stellar Journeys" - <small>Dark Vador</small> </h3>
+    <%= link_to "Book now 🚀", spaceships_path, class: "link btn-link-index" %>
+  </div>
 </div>
 
 <div style="background-color: #2D4E58" class="p-5 mt-5">
-  <p style="color: white" id = "ptitle"><i>New spaceship available :</i></p>
+  <p style="color: white" id = "ptitle"><i>Have a look to our spaceship :</i></p>
   <div class="container cards">
-  <% @spaceships.each do |spaceship| %>
-    <%= link_to spaceship_path(spaceship), class: "link-cards" do%>
+  <% new_spaceships = @spaceships.sample(3) %>
+  <% new_spaceships.each do |new_spaceship| %>
+    <%= link_to spaceship_path(new_spaceship), class: "link-cards" do%>
       <div class="card-trip">
-        <% if spaceship.photo.attached? %>
-          <%= cl_image_tag spaceship.photo.key %>
+        <% if new_spaceship.photo.attached? %>
+          <%= cl_image_tag new_spaceship.photo.key %>
         <% else %>
           <%= image_tag("/home/klafonta/code/Klafonta/AlexMcFly33/stellar-journeys/app/assets/images/no_spaceship.jpg") %>
         <% end %>
       <div class="card-trip-infos">
         <div>
-          <h2><%= spaceship.name %></h2>
-          <p>📍<%= spaceship.localisation %></p>
+          <h2><%= new_spaceship.name %></h2>
+          <p>📍<%= new_spaceship.localisation %></p>
         </div>
-          <h2 class="card-trip-pricing"><%= spaceship.price %>€</h2>
+          <h2 class="card-trip-pricing"><%= new_spaceship.price %>€</h2>
           <img src="https://joueclub-joueclub-fr-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/2fc2d126386412b3d43cf6e3f29628ca8ab4b902_41063493.jpeg" class="card-trip-user avatar-bordered" />
         </div>
       </div>
