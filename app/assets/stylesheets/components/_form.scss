@@ -20,6 +20,23 @@
   border: #930940;
 }
 
+.btn-cross {
+  background-color: transparent;
+  border: transparent;
+  margin-right: 10px;
+    a {
+      text-decoration: none;
+      color: black;
+    }
+}
+
+.btn-hiden {
+  background-color: transparent;
+  border: transparent;
+  margin-left: -30px;
+  z-index: 1;
+}
+
 .btn:hover {
   background-color: #F24453;
   border: #F24453;
