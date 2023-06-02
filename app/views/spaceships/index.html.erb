@@ -16,7 +16,7 @@
         <% if spaceship.photo.attached? %>
           <%= cl_image_tag spaceship.photo.key %>
         <% else %>
-          <%= image_tag("/home/klafonta/code/Klafonta/AlexMcFly33/stellar-journeys/app/assets/images/no_spaceship.jpg") %>
+          <%= image_tag("no_spaceship.jpg") %>
         <% end %>
         <div class="card-trip-infos">
           <div>
@@ -24,7 +24,11 @@
             <p>📍<%= spaceship.localisation %></p>
           </div>
           <h2 class="card-trip-pricing"><%= spaceship.price %>€</h2>
-          <img src="https://joueclub-joueclub-fr-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/2fc2d126386412b3d43cf6e3f29628ca8ab4b902_41063493.jpeg" class="card-trip-user avatar-bordered" />
+          <% if spaceship.user.photo.attached? %>
+              <%= cl_image_tag spaceship.user.photo.key, class: "card-trip-user avatar-bordered" %>
+          <% else %>
+              <img class= "card-trip-user avatar-bordered" src="https://img.myloview.com/stickers/default-avatar-profile-icon-vector-social-media-user-image-700-205124837.jpg" alt="avatar">
+          <% end %></p>
         </div>
       </div>
     <% end %>

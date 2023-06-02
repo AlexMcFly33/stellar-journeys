@@ -13,7 +13,7 @@
               <a class="nav-link" href="/index">Home</a>
             </li>
             <li class="nav-item dropdown" id="avatar">
-              <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="<%=asset_path("Sylvain.jpg") %>" />
+              <%= cl_image_tag current_user.photo.key, class:"avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, aria_haspopup: "true", aria_expanded: "false" %>
               <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                 <div class="dropdown-item">
                   <%= link_to "Your journeys", admin_journeys_path %>
