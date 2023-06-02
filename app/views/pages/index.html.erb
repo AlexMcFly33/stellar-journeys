@@ -1,0 +1,45 @@
+<div class="container">
+  <h2 id="title-index"><i>How does it work ?</i></h2>
+  <div class="card-box">
+    <div class="card-index">
+      <%= image_tag "searchspace.png" %>
+      <h3>Search your ideal spaceship</h3>
+      <p>Take the time to have a look about all the spaceships available.</p>
+    </div>
+    <div class="card-index">
+      <%= image_tag "chose.png" %>
+      <h3>Chose one and book it !</h3>
+      <p>Send your request to the owner of the spaceship.</p>
+    </div>
+    <div class="card-index">
+      <%= image_tag "spaceman.png" %>
+      <h3>The world is yours</h3>
+      <p>Enjoy your trip and have fun.</p>
+    </div>
+  </div>
+</div>
+
+<div style="background-color: #2D4E58" class="p-5 mt-5">
+  <p style="color: white" id = "ptitle"><i>New spaceship available :</i></p>
+  <div class="container cards">
+  <% @spaceships.each do |spaceship| %>
+    <%= link_to spaceship_path(spaceship), class: "link-cards" do%>
+      <div class="card-trip">
+        <% if spaceship.photo.attached? %>
+          <%= cl_image_tag spaceship.photo.key %>
+        <% else %>
+          <%= image_tag("/home/klafonta/code/Klafonta/AlexMcFly33/stellar-journeys/app/assets/images/no_spaceship.jpg") %>
+        <% end %>
+      <div class="card-trip-infos">
+        <div>
+          <h2><%= spaceship.name %></h2>
+          <p>📍<%= spaceship.localisation %></p>
+        </div>
+          <h2 class="card-trip-pricing"><%= spaceship.price %>€</h2>
+          <img src="https://joueclub-joueclub-fr-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/2fc2d126386412b3d43cf6e3f29628ca8ab4b902_41063493.jpeg" class="card-trip-user avatar-bordered" />
+        </div>
+      </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
