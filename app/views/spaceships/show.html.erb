@@ -3,7 +3,11 @@
     <div class="row" id="head-bar">
       <div class="col-sm-1">
         <div class="user-pic">
-          <img src="https://joueclub-joueclub-fr-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/2fc2d126386412b3d43cf6e3f29628ca8ab4b902_41063493.jpeg">
+          <% if @spaceship.user.photo.attached? %>
+              <%= cl_image_tag @spaceship.user.photo.key %>
+          <% else %>
+              <%= image_tag("avatar.jpg") %>
+          <% end %></p>
         </div>
       </div>
       <div class="col-sm-4">

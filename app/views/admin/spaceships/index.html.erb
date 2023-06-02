@@ -9,7 +9,7 @@
               <% if spaceship.photo.attached? %>
                   <%= cl_image_tag spaceship.photo.key %>
                 <% else %>
-                  <%= image_tag("/home/klafonta/code/Klafonta/AlexMcFly33/stellar-journeys/app/assets/images/no_spaceship.jpg") %>
+                  <%= image_tag("no_spaceship.jpg") %>
               <% end %>
             <div class="card-product-infos">
               <h2><%= spaceship.name %></h2>
