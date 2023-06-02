@@ -23,3 +23,14 @@
   background-color: #F24453;
   border: #F24453;
 }
+
+#search:hover {
+  background-image: url("https://media3.giphy.com/media/G4WadRySq8IROWOLwc/giphy.gif?cid=ecf05e47m6rx4iq15f2qyndbede9c3sr2xfhro8hd9a9zisj&ep=v1_gifs_search&rid=giphy.gif&ct=g");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.4;
+  color: white;
+    &::placeholder {
+      color: white;
+  }
+}

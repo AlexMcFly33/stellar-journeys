@@ -1,10 +1,10 @@
 <%= render 'shared/filter' %>
 
-<div class="container mt-5">
-  <% if Spaceship.count == 1%>
-      <p id = "ptitle"><i><%= Spaceship.count %> spaceship is available :</i></p>
+<div class="container mt-2">
+  <% if @spaceships.count == 1%>
+      <p id = "ptitle"><i><%= @spaceships.count %> spaceship is available :</i></p>
     <% elsif Spaceship.count > 1%>
-      <p id = "ptitle"><i><%= Spaceship.count %> spaceships are available :</i></p>
+      <p id = "ptitle"><i><%= @spaceships.count %> spaceships are available :</i></p>
     <% elsif %>
       <p id = "ptitle"><i>Sorry, no result match with your research</i></p>
   <% end %>
