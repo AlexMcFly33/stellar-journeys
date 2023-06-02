@@ -12,3 +12,26 @@
     opacity: 0.6;
   }
 }
+
+.btn-link-index {
+  color: white;
+  background-color: #3F3D54;
+  border: white solid;
+  border-radius: 20px;
+  padding: 8px 30px;
+  font-size: 20px;
+  transition: 0.5s;
+  margin-top: 9px;
+  display: inline-block;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+
+  &:hover {
+    background-color: #F24453;
+    color: white;
+  }
+}
+
+.quote {
+  font-style: italic;
+}
