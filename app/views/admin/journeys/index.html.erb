@@ -9,7 +9,7 @@
           <% end %>
         <div class="card-product-infos">
           <h2><%= journey.spaceship.name %> <%= link_to "<i class='fa-solid fa-trash-can'></i>".html_safe, admin_journey_path(journey), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "link" %></h2>
-          <p>Du <%= journey.start_date.day%>-<%= journey.start_date.month %>-<%= journey.start_date.year %>  au <%= journey.end_date.day%>-<%= journey.end_date.month %>-<%= journey.end_date.year %>
+          <p>Du <%= journey.start_date.strftime("%d-%m-%Y") %>  au <%= journey.end_date.strftime("%d-%m-%Y")%>
         </div>
       </div>
     <% end %>
