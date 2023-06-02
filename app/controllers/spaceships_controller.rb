@@ -5,6 +5,21 @@ class SpaceshipsController < ApplicationController
 
   def index
     @spaceships = policy_scope(Spaceship)
+    if params[:query].present?
+      if params[:query] == params[:query].to_i.to_s
+        @spaceships = @spaceships.where("superficy = ?", params[:query].to_i)
+      else
+        sql_subquery = "name @@ :query
+                OR localisation @@ :query"
+        @spaceships = @spaceships.where(sql_subquery, query: "%#{params[:query]}%")
+      end
+    end
+    if params[:gravity].present?
+      if params[:gravity] == nil
+        spaceships_path
+      end
+      @spaceships = @spaceships.where(gravity: params[:gravity])
+    end
   end
 
   def show

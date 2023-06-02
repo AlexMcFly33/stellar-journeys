@@ -1,0 +1,20 @@
+<div class="row justify-content-center">
+  <div class="col-sm-3 my-3">
+    <%= form_with url: spaceships_path, method: :get, class: "d-flex" do %>
+      <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Find your Spaceship"
+        %>
+    <% end %>
+  </div>
+
+
+<div class="col-sm-2 my-3 d-flex justify-content">
+    <%= form_with url: spaceships_path, method: :get, class: "d-flex" do %>
+      <%= select_tag :gravity, options_for_select([['Gravity ?'], ['All', nil], ['With', true], ['Without', false]]), class: "form-control",
+        onchange: "this.form.submit();"
+      %>
+    <% end %>
+  </div>
+</div>
