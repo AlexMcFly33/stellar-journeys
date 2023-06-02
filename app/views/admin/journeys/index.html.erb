@@ -1,4 +1,10 @@
 <div class="container-spaceship mt-4">
+  <% if Journey.count == 0 %>
+    <div id="create_journey">
+      <p>You don't have any pending journeys</p>
+      <%= link_to "+ Create your first journey", spaceships_path, class: "btn btn-primary" %>
+    </div>
+  <% else %>
   <p id = "ptitle"><i>Waiting for confirmation from the owner :</i></p>
     <% @journeys.each do |journey| %>
       <div class="card-product mt-3">
@@ -13,4 +19,5 @@
         </div>
       </div>
     <% end %>
+  <% end %>
 </div>
