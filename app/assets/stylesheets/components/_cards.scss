@@ -33,6 +33,10 @@
   position: relative;
 }
 
+.card-trip-infos h2 {
+  font-family: 'Cinzel', serif;
+}
+
 .card-trip-infos .card-trip-user {
   position: absolute;
   right: 16px;
@@ -44,6 +48,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 15px;
+  font-family: 'Cinzel', serif;
 }
 
 .card-product {
@@ -53,6 +58,7 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
+  font-family: 'Cinzel', serif;
 }
 
 .card-product img {
@@ -113,4 +119,5 @@
 
 .card-index h3 {
   font-style: italic;
+  font-family: 'Cinzel', serif;
 }
