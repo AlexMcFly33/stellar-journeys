@@ -1,17 +1,23 @@
 <div class="row justify-content-center">
   <div class="col-sm-6 my-3">
     <%= form_with url: spaceships_path, method: :get, class: "d-flex" do %>
+        <button name="button" type="submit" class="btn-cross">
+          <%= link_to "<i class='fa-solid fa-xmark'></i>".html_safe, spaceships_path%>
+        </button>
       <%= text_field_tag :query,
             params[:query],
             class: "form-control",
             id: "search",
             placeholder: "Find your Spaceship"
         %>
+        <button name="button" type="submit" class="btn-hiden">
+        <i class="fas fa-search"></i></button>
+
     <% end %>
   </div>
 
 
-<div class="col-sm-2 my-3 d-flex justify-content">
+  <div class="col-sm-2 my-3 d-flex justify-content">
     <%= form_with url: spaceships_path, method: :get, class: "d-flex" do %>
       <%= select_tag :gravity, options_for_select([['Gravity ?'], ['All', nil], ['With', true], ['Without', false]]), class: "form-control",
         onchange: "this.form.submit();"
