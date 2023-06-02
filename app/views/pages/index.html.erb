@@ -18,13 +18,13 @@
     </div>
   </div>
   <div style="text-align: center">
-    <h3 class="quote mt-5">"I rent so much beautifull spaceship, thank you Stellar Journeys" - <small>Dark Vador</small> </h3>
-    <%= link_to "Book now 🚀", spaceships_path, class: "link btn-link-index" %>
+    <h3 class="quote mt-5">"I rent so much beautiful spaceship, thank you Stellar Journeys" - <small>Dark Vador</small> </h3>
+    <%= link_to "Book now 🚀", spaceships_path, class: "btn btn-primary", id:"book_now" %>
   </div>
 </div>
 
 <div style="background-color: #2D4E58" class="p-5 mt-5">
-  <p style="color: white" id = "ptitle"><i>Have a look to our spaceship :</i></p>
+  <p style="color: white" id = "ptitle"><i>Have a look at our spaceship :</i></p>
   <div class="container cards">
   <% new_spaceships = @spaceships.sample(3) %>
   <% new_spaceships.each do |new_spaceship| %>

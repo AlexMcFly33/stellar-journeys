@@ -1,22 +1,29 @@
 
 <div>
-  <div class="container-spaceship">
-    <p id = "ptitle"><i>Your spaceship :</i></p>
-    <% new_spaceship = @spaceships.sample(3) %>
-      <% @spaceships.each do |spaceship| %>
-        <%= link_to spaceship_path(spaceship), class: "link-cards" do%>
-          <div class="card-product mt-3">
-              <% if spaceship.photo.attached? %>
-                  <%= cl_image_tag spaceship.photo.key %>
-                <% else %>
-                  <%= image_tag("/home/klafonta/code/Klafonta/AlexMcFly33/stellar-journeys/app/assets/images/no_spaceship.jpg") %>
-              <% end %>
-            <div class="card-product-infos">
-              <h2><%= spaceship.name %></h2>
-              <%= link_to "<i class='fa-solid fa-trash-can'></i>".html_safe, admin_spaceship_path(spaceship), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "link" %> - <%= link_to "<i class='fa-solid fa-pen-to-square'></i>".html_safe, edit_admin_spaceship_path(spaceship), class: "link" %>
+  <% if Spaceship.count == 0 %>
+    <div id="create_journey">
+      <p>You don't have any registered spaceships</p>
+      <%= link_to "+ Create your first spaceship", new_spaceship_path, class: "btn btn-primary" %>
+    </div>
+  <% else %>
+    <div class="container-spaceship">
+      <p id = "ptitle"><i>Your spaceship :</i></p>
+      <% new_spaceship = @spaceships.sample(3) %>
+        <% @spaceships.each do |spaceship| %>
+          <%= link_to spaceship_path(spaceship), class: "link-cards" do%>
+            <div class="card-product mt-3">
+                <% if spaceship.photo.attached? %>
+                    <%= cl_image_tag spaceship.photo.key %>
+                  <% else %>
+                    <%= image_tag("/home/klafonta/code/Klafonta/AlexMcFly33/stellar-journeys/app/assets/images/no_spaceship.jpg") %>
+                <% end %>
+              <div class="card-product-infos">
+                <h2><%= spaceship.name %></h2>
+                <%= link_to "<i class='fa-solid fa-trash-can'></i>".html_safe, admin_spaceship_path(spaceship), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "link" %> - <%= link_to "<i class='fa-solid fa-pen-to-square'></i>".html_safe, edit_admin_spaceship_path(spaceship), class: "link" %>
+              </div>
             </div>
-          </div>
+          <% end %>
         <% end %>
-      <% end %>
-  </div>
+    </div>
+  <% end %>
 </div>
